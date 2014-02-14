@@ -1,5 +1,6 @@
-<h2>Create a new user here!</h2>
+<h2>Create your account here!</h2>
 
+<div class="form">
 <% unless @user.nil? || @user.id.nil? %>
   <div id="errors">
     <h3>Errors!</h3>
@@ -12,3 +13,5 @@
 <% end %>
 
 <%= render "form" %>
+
+</div>
