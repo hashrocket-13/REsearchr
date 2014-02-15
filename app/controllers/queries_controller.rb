@@ -3,8 +3,8 @@ class QueriesController < ApplicationController
 def index
     @user = User.find(params[:user_id])
     @query = Query.all
-    @result = @user.queries.last
-    @result = @result.q_string 
+    @result = @query
+    @result = @result[0].q_string
     @api = get_data(@result)
 end
 
@@ -27,7 +27,8 @@ end
 
   def show
     @user = User.find(params[:user_id])
-    @result = @user.queries
+    @query = Query.find(params[:id])
+    @result = @query
     @result = @result.q_string 
     @api = get_data(@result)
   end

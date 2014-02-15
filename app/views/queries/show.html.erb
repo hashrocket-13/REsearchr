@@ -2,3 +2,24 @@
 <% @api.each do |item| %>
   <li><%= item %></li>
 <% end %>
+
+<table>
+    <thead>
+        <tr>
+            <th>Listing Count</th>
+            <th>Median Price</th>
+            <th>Average Price</th>
+            <th>Standard Dev Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><%= @api.fetch("listing_count") %></td>
+            <td><%= @api.fetch("median_price") %></td>
+            <td><%= @api.fetch("average_price") %></td>
+            <td><%= @api.fetch("stddev_price") %></td>
+        </tr>
+
+    </tbody>
+</table>
+

@@ -1,14 +1,14 @@
 <h1>View all Saved Searches</h1>
 
-<% @query.each do |item| %>
-  <li><%= item.title %></li>
+<% @api.each do |item| %>
+  <li><%= item %></li>
   <br>
-  <li>Listing Count: <%=@api.fetch("listing_count") %></li>
+  
 <% end %>
 
 
 
-\
+
 
 
 <%= @api %>
