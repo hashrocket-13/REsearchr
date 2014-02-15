@@ -1,0 +1,25 @@
+
+<form action="/users/<%= params[:user_id] %>/queries" method="POST">
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+  <label>
+    Title: 
+  <input type="text" name="title">
+  </label>
+
+  <label>
+    Zip:
+  <input type="text" name="zip">
+  </label>
+  
+  <label>
+    Beds:
+  <input type="text" name="beds">
+  </label>
+
+  <label>
+    Baths:
+  <input type="text" name="baths">
+  </label>
+  <br>
+  <button>Submit Search</button>
+
