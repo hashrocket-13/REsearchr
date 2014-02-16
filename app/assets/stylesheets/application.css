@@ -19,8 +19,31 @@ body {
   margin: 0;
 }
 
+.background img {
+  z-index: -1;
+  min-height: 100%;
+  min-width: 1024px;
+  
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.text {
+  color: #fff;
+  font-size: 30px;
+  background-color: rgba(10,10,10,0.5);
+  padding: 20px;
+  width: 800px;
+}
+
  .header {
-  background-color: rgb(75, 170, 211);
+  background-color: #dedede;
   padding: 20px 10px 20px 10px;
   overflow: hidden;
   position: relative;
