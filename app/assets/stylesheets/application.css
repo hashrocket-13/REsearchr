@@ -50,8 +50,13 @@ body {
 
  .center_table  {
   width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 400px;
+
+}
+
+ .center_table_index  {
+  width: 1300px;
+  margin-left: 250px;
 }
 
 a {

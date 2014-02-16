@@ -1,49 +1,40 @@
 <h1>View all Saved Searches</h1>
 
 
-<ul>
-<% @query.each do |item| %>
-  <li><a href="/users/<%= params[:user_id] %>/queries/<%= item.id %>"><%= item.title %></a></li>
-  <li><%= item.q_string %></li>
-<% end %>
-</ul>
-
-<% @arr.each do |item| %>
-  <%= item.fetch("criteria_description") %>
-<% end %>
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="center_table">
-<div class="caption"></div>  
+<div class="center_table_index">
+<div class="caption">All Saved Searches</div>  
 <div id="table">
   <div class="header-row row">
-    <span class="cell primary">Name</span>
-    <span class="cell">Data</span>
+    <span class="cell primary">Description</span>
+    <span class="cell">Total Listings</span>
+    <span class="cell">Avg Price</span>
+    <span class="cell">Price 10th Percentile</span>
+    <span class="cell">Price 90th Percentile</span>
+    <span class="cell">Avg SqFt</span>
+    <span class="cell">Avg Price/SqFt</span>
+    <span class="cell">Avg Week on Market</span>
+    <span class="cell">Raw Data</span>
   </div>
-  <% @query.each do |item| %>
+  <% @arr.each do |item| %>
   <div class="row">
   <input type="radio" name="expand">
-    <span class="cell primary" data-label="Name"><a href="/users/<%= params[:user_id] %>/queries/<%= item.id %>"><%= item.title %></a></span>
-    <span class="cell" data-label="Data"><%= item.q_string %></span>
-
+    <span class="cell primary" data-label="Description"><%= item.fetch("criteria_description") %></span>
+    <span class="cell" data-label="Total Listings"><%= item.fetch("listing_count") %></span>
+    <span class="cell" data-label="Avg Price"><%= item.fetch("average_price") %></span>
+    <span class="cell" data-label="Price 10th Percentile"><%= item.fetch("percentile_10_price") %></span>
+    <span class="cell" data-label="Price 90th Percentile"><%= item.fetch("percentile_90_price") %></span>
+    <span class="cell" data-label="Avg SqFt"><%= item.fetch("average_sqft") %></span>
+    <span class="cell" data-label="Avg Price/SqFt"><%= item.fetch("average_ppsf") %></span>
+    <span class="cell" data-label="Avg WOM"><%= item.fetch("average_wom") %></span>
+    <span class="cell" data-label="Raw Data">
+    <% @query.each do |db_item| %>
+  <a href="/users/<%= params[:user_id] %>/queries/<%= db_item.id %>">Data</a>
+<% end %>
   </div>
+  <% end %>
+ </div>
 </div>
-</div>
-<% end %> -->
+
 
 
 
