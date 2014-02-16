@@ -8,6 +8,45 @@
 <% end %>
 </ul>
 
+<% @arr.each do |item| %>
+  <%= item.fetch("criteria_description") %>
+<% end %>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="center_table">
+<div class="caption"></div>  
+<div id="table">
+  <div class="header-row row">
+    <span class="cell primary">Name</span>
+    <span class="cell">Data</span>
+  </div>
+  <% @query.each do |item| %>
+  <div class="row">
+  <input type="radio" name="expand">
+    <span class="cell primary" data-label="Name"><a href="/users/<%= params[:user_id] %>/queries/<%= item.id %>"><%= item.title %></a></span>
+    <span class="cell" data-label="Data"><%= item.q_string %></span>
+
+  </div>
+</div>
+</div>
+<% end %> -->
+
+
+
 
 
 

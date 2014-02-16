@@ -1,27 +1,6 @@
 <h1>View Raw Data</h1>
 <!-- <h2><%= @api.fetch("criteria_description") %></h2> -->
-
-<!-- <div class="center">
-        <ul class="left">
-            <li>Listing Count: <%= @api.fetch("listing_count") %></li>
-            <li>Median Price: $<%= @api.fetch("median_price").to_i %></li>
-            <li>Average Price: <%= @api.fetch("average_price") %></li>
-            <li>10th Percentile Price: <%= @api.fetch("percentile_10_price") %></li>
-            <li>90th Percentile Price: <%= @api.fetch("percentile_90_price") %></li>
-            <li>Square Feet Count: <%= @api.fetch("sqft_count") %></li>
-            <li>Median Square Feet: <%= @api.fetch("median_sqft") %></li>
-            <li>Average Square Feet: <%= @api.fetch("average_sqft") %></li>
-            <li>Median Price/SqFT: <%= @api.fetch("median_ppsf") %></li>
-            <li>Average Price/SqFT: <%= @api.fetch("average_ppsf") %></li>
-            <li>Median Weeks On Market: <%= @api.fetch("median_wom") %></li>
-            <li>Average Weeks on Market: <%= @api.fetch("average_wom") %></li>
-            <li>Search Criteria: <%= @api.fetch("criteria") %></li>
-            <li>Search Description: <%= @api.fetch("criteria_description") %></li>
-            <li>Search URL: <%= @api.fetch("search_url") %></li>
-        </ul>
-
-</div> -->
-
+<h4><%= link_to "back to queries", user_queries_path(@user) %></h4>
 
 <div class="center_table">
 <div class="caption"><%= @api.fetch("criteria_description") %></div>  
@@ -82,7 +61,7 @@
   <div class="row">
   <input type="radio" name="expand">
     <span class="cell primary" data-label="Vehicle">Average Price/SqFt</span>
-    <span class="cell" data-label="Exterior"><%= @api.fetch("average_ppsf") %></span>
+    <span class="cell" data-label="Exterior">$<%= @api.fetch("average_ppsf") %></span>
 
         </div>
   <div class="row">

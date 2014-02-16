@@ -3,10 +3,17 @@ class QueriesController < ApplicationController
 def index
     @user = User.find(params[:user_id])
     @query = Query.all
+    @result = @query
     
-    # @result = @query
-    # @result = @result.all.q_string
-     # api = get_data(@item.q_string)
+    @arr=[]
+    i=0
+    while i < @result.length 
+       string = @result[i].q_string
+       @api = get_data(string)
+       @arr << @api
+         i += 1
+    end
+   
 end
 
 
@@ -17,7 +24,6 @@ end
 
   def create
     @user = User.find(params[:user_id])
-    
     @query = @user.queries.new(title: params[:title], q_string: create_string(params[:title], params[:zip], params[:beds], params[:baths]))
     if @query.save
       redirect_to user_path(@user)
