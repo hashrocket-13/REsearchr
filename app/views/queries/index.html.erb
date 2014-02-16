@@ -1,16 +1,14 @@
 <h1>View all Saved Searches</h1>
 
-<% @api.each do |item| %>
-  <li><%= item %></li>
-  <br>
-  
+
+<ul>
+<% @query.each do |item| %>
+  <li><a href="/users/<%= params[:user_id] %>/queries/<%= item.id %>"><%= item.title %></a></li>
+  <li><%= item.q_string %></li>
 <% end %>
+</ul>
 
 
 
-
-
-
-<%= @api %>
 
 

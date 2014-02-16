@@ -48,6 +48,12 @@ body {
   margin-left: 37%;
  }
 
+ .center_table  {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 a {
   text-decoration: none;
 }
@@ -70,6 +76,10 @@ a {
 
  h1, h2, h3 {
   text-align: center;
+ }
+
+ ul {
+  text-align: left;
  }
 
 /***********FORM STYLE************/
@@ -131,89 +141,187 @@ color:#09C;
 
 
 
+/*********query table layout*********/
+/*
+  body {
+    background: #cacaca;
+    margin: 0;
+    padding: 20px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+      font-weight: 300;
+  }*/
 
-@import "compass/css3";
-@import url(http://fonts.googleapis.com/css?family=Patua+One|Open+Sans);
+  #table {
+    display: table;
+    
+    width: 70%; 
+    background: #fff;
+    margin: 0;
+    box-sizing: border-box;
 
-* { 
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
-  box-sizing: border-box; 
-}
+   }
 
-body {
-  background:#353a40;
-}
+   .caption {
+    display: block;
+    width: 70%;
+    background: #64e0ef;
+    height: 55px;
+    padding-left: 10px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 55px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    box-sizing: border-box;
+   }
 
-table {
-  border-collapse: separate;
-  background:#fff;
-  @include border-radius(5px);
-  margin:50px auto;
-  @include box-shadow(0px 0px 5px rgba(0,0,0,0.3));
-}
 
-thead {
-  @include border-radius(5px);
-}
+   .header-row {
+    background: #8b8b8b;
+    color: #fff;
 
-thead th {
-  font-family: 'Patua One', cursive;
-  font-size:16px;
-  font-weight:400;
-  color:#fff;
-  @include text-shadow(1px 1px 0px rgba(0,0,0,0.5));
-  text-align:left;
-  padding:20px;
-  @include background-image(linear-gradient(#646f7f, #4a5564));
-  border-top:1px solid #858d99;
-  
-  &:first-child {
-   @include border-top-left-radius(5px); 
+   }
+
+  .row {
+    display: table-row;
   }
 
-  &:last-child {
-    @include border-top-right-radius(5px); 
+  .cell {
+    display: table-cell;
+    
+    padding: 6px; 
+    border-bottom: 1px solid #e5e5e5;
+    text-align: center;
   }
-}
 
-tbody tr td {
-  font-family: 'Open Sans', sans-serif;
-  font-weight:400;
-  color:#5f6062;
-  font-size:13px;
-  padding:20px 20px 20px 20px;
-  border-bottom:1px solid #e0e0e0;
-  
-}
-
-tbody tr:nth-child(2n) {
-  background:#f0f3f5;
-}
-
-tbody tr:last-child td {
-  border-bottom:none;
-  &:first-child {
-    @include border-bottom-left-radius(5px);
+  .primary {
+    text-align: left;
   }
-  &:last-child {
-    @include border-bottom-right-radius(5px);
+
+
+  input[type="radio"],
+  input[type="checkbox"]{
+    display: none;
   }
-}
 
-tbody:hover > tr td {
-  @include opacity(0.5);
-  
-  /* uncomment for blur effect */
-  /* color:transparent;
-  @include text-shadow(0px 0px 2px rgba(0,0,0,0.8));*/
-}
 
-tbody:hover > tr:hover td {
-  @include text-shadow(none);
-  color:#2d2d2d;
-  @include opacity(1.0);
-}
+  @media only screen and (max-width: 760px)  {
+
+    body {
+      padding: 0;
+    }
+
+    #table {
+      display: block;
+      margin: 44px 0 0 0;
+    }
+
+    .caption {
+      position: fixed;
+      top: 0;
+      text-align: center;
+      height: 44px;
+      line-height: 44px;
+      z-index: 5;
+      border-bottom: 2px solid #999;
+    }
+
+    .row { 
+      position: relative;
+      display: block;
+      border-bottom: 1px solid #ccc; 
+
+    }
+
+    .header-row {
+      display: none;
+    }
+    
+    .cell { 
+      display: block;
+
+      border: none;
+      position: relative;
+      height: 45px;
+      line-height: 45px;
+      text-align: left;
+    }
+
+    .primary:after {
+      content: "";
+      display: block;
+      position: absolute;
+      right:20px;
+      top:18px;
+      z-index: 2;
+      width: 0; 
+      height: 0; 
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent; 
+      border-right:10px solid #ccc;
+
+    }
+
+    .cell:nth-of-type(n+2) { 
+      display: none; 
+    }
+
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      width: 99%;
+      height: 100%;
+      opacity: 0;
+    }
+
+    input[type="radio"]:checked ~ .cell,
+    input[type="checkbox"]:checked ~ .cell {
+      display: block;
+
+      border-bottom: 1px solid #eee; 
+    }
+
+    input[type="radio"]:checked ~ .cell:nth-of-type(n+2),
+    input[type="checkbox"]:checked ~ .cell:nth-of-type(n+2) {
+      
+      background: #e0e0e0;
+    }
+
+    input[type="radio"]:checked ~ .cell:nth-of-type(n+2):before,
+    input[type="checkbox"]:checked ~ .cell:nth-of-type(n+2):before {
+      content: attr(data-label);
+
+      display: inline-block;
+      width: 60px;
+      background: #999;
+      border-radius: 10px;
+      height: 20px;
+      margin-right: 10px;
+      font-size: 12px;
+      line-height: 20px;
+      text-align: center;
+      color: white;
+
+    }
+
+    input[type="radio"]:checked ~ .primary,
+    input[type="checkbox"]:checked ~ .primary  {
+      border-bottom: 2px solid #999;
+    }
+
+    input[type="radio"]:checked ~ .primary:after,
+    input[type="checkbox"]:checked ~ .primary:after {
+      position: absolute;
+      right:18px;
+      top:22px;
+      border-right: 10px solid transparent;
+      border-left: 10px solid transparent; 
+      border-top:10px solid #ccc;
+      z-index: 2;
+    }
+  }
 
 
 

@@ -3,9 +3,10 @@ class QueriesController < ApplicationController
 def index
     @user = User.find(params[:user_id])
     @query = Query.all
-    @result = @query
-    @result = @result[0].q_string
-    @api = get_data(@result)
+    
+    # @result = @query
+    # @result = @result.all.q_string
+     # api = get_data(@item.q_string)
 end
 
 
@@ -31,6 +32,12 @@ end
     @result = @query
     @result = @result.q_string 
     @api = get_data(@result)
+  end
+
+  def destroy
+    @query.destroy
+    #session.destroy
+    redirect_to root_path
   end
 
   private

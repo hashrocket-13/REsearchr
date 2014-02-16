@@ -1,25 +1,119 @@
+<h1>View Raw Data</h1>
+<!-- <h2><%= @api.fetch("criteria_description") %></h2> -->
 
-<% @api.each do |item| %>
-  <li><%= item %></li>
+<!-- <div class="center">
+        <ul class="left">
+            <li>Listing Count: <%= @api.fetch("listing_count") %></li>
+            <li>Median Price: $<%= @api.fetch("median_price").to_i %></li>
+            <li>Average Price: <%= @api.fetch("average_price") %></li>
+            <li>10th Percentile Price: <%= @api.fetch("percentile_10_price") %></li>
+            <li>90th Percentile Price: <%= @api.fetch("percentile_90_price") %></li>
+            <li>Square Feet Count: <%= @api.fetch("sqft_count") %></li>
+            <li>Median Square Feet: <%= @api.fetch("median_sqft") %></li>
+            <li>Average Square Feet: <%= @api.fetch("average_sqft") %></li>
+            <li>Median Price/SqFT: <%= @api.fetch("median_ppsf") %></li>
+            <li>Average Price/SqFT: <%= @api.fetch("average_ppsf") %></li>
+            <li>Median Weeks On Market: <%= @api.fetch("median_wom") %></li>
+            <li>Average Weeks on Market: <%= @api.fetch("average_wom") %></li>
+            <li>Search Criteria: <%= @api.fetch("criteria") %></li>
+            <li>Search Description: <%= @api.fetch("criteria_description") %></li>
+            <li>Search URL: <%= @api.fetch("search_url") %></li>
+        </ul>
+
+</div> -->
+
+
+<div class="center_table">
+<div class="caption"><%= @api.fetch("criteria_description") %></div>  
+<div id="table">
+  <div class="header-row row">
+    <span class="cell primary">Name</span>
+    <span class="cell">Data</span>
+
+  </div>
+  <div class="row">
+  <input type="radio" name="expand">
+    <span class="cell primary" data-label="Name">Listing Count</span>
+    <span class="cell" data-label="Data"><%= @api.fetch("listing_count") %></span>
+
+  </div>
+  <div class="row">
+  <input type="radio" name="expand">
+    <span class="cell primary" data-label="Vehicle">Median Price</span>
+    <span class="cell" data-label="Exterior">$<%= @api.fetch("median_price").to_i %></span>
+
+  </div>
+  <div class="row">
+  <input type="radio" name="expand">
+    <span class="cell primary" data-label="Vehicle">Average Price</span>
+    <span class="cell" data-label="Exterior">$<%= @api.fetch("average_price") %></span>
+
+  </div>
+  <div class="row">
+  <input type="radio" name="expand">
+    <span class="cell primary" data-label="Vehicle">Price in 10th Percentile</span>
+    <span class="cell" data-label="Exterior">$<%= @api.fetch("percentile_10_price") %></span>
+
+  </div>
+  <div class="row">
+  <input type="radio" name="expand">
+    <span class="cell primary" data-label="Vehicle">Price in 90th Percentile</span>
+    <span class="cell" data-label="Exterior">$<%= @api.fetch("percentile_90_price") %></span>
+
+  </div>
+  <div class="row">
+  <input type="radio" name="expand">
+    <span class="cell primary" data-label="Vehicle">Median Square Feet</span>
+    <span class="cell" data-label="Exterior"><%= @api.fetch("median_sqft") %></span>
+
+    </div>
+  <div class="row">
+  <input type="radio" name="expand">
+    <span class="cell primary" data-label="Vehicle">Average Square Feet</span>
+    <span class="cell" data-label="Exterior"><%= @api.fetch("average_sqft") %></span>
+
+        </div>
+  <div class="row">
+  <input type="radio" name="expand">
+    <span class="cell primary" data-label="Vehicle">Median Price/SqFt</span>
+    <span class="cell" data-label="Exterior"><%= @api.fetch("median_ppsf") %></span>
+
+        </div>
+  <div class="row">
+  <input type="radio" name="expand">
+    <span class="cell primary" data-label="Vehicle">Average Price/SqFt</span>
+    <span class="cell" data-label="Exterior"><%= @api.fetch("average_ppsf") %></span>
+
+        </div>
+  <div class="row">
+  <input type="radio" name="expand">
+    <span class="cell primary" data-label="Vehicle">Median Weeks on Market</span>
+    <span class="cell" data-label="Exterior"><%= @api.fetch("median_wom") %></span>
+
+        </div>
+  <div class="row">
+  <input type="radio" name="expand">
+    <span class="cell primary" data-label="Vehicle">Average Weeks on Market</span>
+    <span class="cell" data-label="Exterior"><%= @api.fetch("average_wom") %></span>
+
+        </div>
+  <div class="row">
+  <input type="radio" name="expand">
+    <span class="cell primary" data-label="Vehicle">Search Criteria</span>
+    <span class="cell" data-label="Exterior"><%= @api.fetch("criteria") %></span>
+
+        </div>
+  <div class="row">
+  <input type="radio" name="expand">
+    <span class="cell primary" data-label="Vehicle">Search URL</span>
+    <span class="cell" data-label="Exterior"><a href="<%= @api.fetch("search_url") %>"></a></span>
+
+  </div>
+</div>
+</div>
+
+<div class="center">
+<%= form_tag user_query_path(@query, params[:id]), method: "delete" do %>
+  <%= submit_tag("Delete Query") %>
 <% end %>
-
-<table>
-    <thead>
-        <tr>
-            <th>Listing Count</th>
-            <th>Median Price</th>
-            <th>Average Price</th>
-            <th>Standard Dev Price</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><%= @api.fetch("listing_count") %></td>
-            <td><%= @api.fetch("median_price") %></td>
-            <td><%= @api.fetch("average_price") %></td>
-            <td><%= @api.fetch("stddev_price") %></td>
-        </tr>
-
-    </tbody>
-</table>
-
+</div>
