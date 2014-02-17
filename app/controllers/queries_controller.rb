@@ -4,7 +4,6 @@ before_action :load_user, only: [:index, :create, :show]
 
 def index
     @query = Query.where(user_id: params[:user_id])
-    #@query = Query.all
     @result = @query
     
     @arr=[]
@@ -17,7 +16,6 @@ def index
     end
 
 end
-
 
 def new
     @query = Query.new
@@ -59,6 +57,10 @@ end
 
   def create_string(title, zip, beds, baths)
     return "http://streeteasy.com/nyc/api/#{title}/data?criteria=zip:#{zip}%7Cbeds:#{beds}%7Cbaths:#{baths}&key=#{STREETEASY_CLIENT_ID}&format=json"
+  end
+
+  def value
+    return 
   end
 
 end
