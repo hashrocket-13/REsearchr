@@ -49,3 +49,7 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'httparty'
 
 gem 'pry-rails', group: [:development, :test]
+
+gem 'rails_12factor', group: :production
+
+ruby "2.1.0"
