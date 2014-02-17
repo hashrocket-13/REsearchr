@@ -41,7 +41,7 @@ body {
   padding: 20px;
   width: 800px;
   font-family: 'Bevan', sans-serif;
-  
+
 }
 
 .sm {
@@ -49,7 +49,7 @@ body {
 }
 
  .header {
-  background-color: #dedede;
+  background-color: rgba(203, 203, 203, 0.9);
   padding: 20px 10px 20px 10px;
   overflow: hidden;
   position: relative;
