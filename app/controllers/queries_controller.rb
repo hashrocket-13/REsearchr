@@ -56,7 +56,7 @@ end
   end
 
   def create_string(title, zip, beds, baths)
-    return "http://streeteasy.com/nyc/api/#{title}/data?criteria=zip:#{zip}%7Cbeds:#{beds}%7Cbaths:#{baths}&key=639ac73e9907562d8bb933b31b312eb0e7f92ecc&format=json"
+    return "http://streeteasy.com/nyc/api/#{title}/data?criteria=zip:#{zip}%7Cbeds:#{beds}%7Cbaths:#{baths}&key=#{STREETEASY_CLIENT_ID}&format=json"
   end
 
  
