@@ -2,7 +2,8 @@ class QueriesController < ApplicationController
 
 def index
     @user = User.find(params[:user_id])
-    @query = Query.all
+    @query = Query.where(user_id: params[:user_id])
+    #@query = Query.all
     @result = @query
     
     @arr=[]
@@ -13,7 +14,7 @@ def index
        @arr << @api
          i += 1
     end
-   
+
 end
 
 

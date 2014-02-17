@@ -85,14 +85,15 @@
   <div class="row">
   <input type="radio" name="expand">
     <span class="cell primary" data-label="Vehicle">Search URL</span>
-    <span class="cell" data-label="Exterior"><a href="<%= @api.fetch("search_url") %>"></a></span>
-
+    <span class="cell" data-label="Exterior"><%= @api.fetch("search_url") %></span>
+    
   </div>
 </div>
 </div>
-
+<br>
 <div class="center">
 <%= form_tag user_query_path(@query, params[:user_id]), method: "delete" do %>
   <%= submit_tag("Delete Query") %>
 <% end %>
 </div>
+<br><br>
