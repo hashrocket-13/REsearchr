@@ -1,9 +1,9 @@
 <h2>Welcome <%= @user.first_name %>!</h2>
 
 <div class="center">
-<p><%= link_to "Edit My Info", edit_user_path(@user) %></p>
-<p><%= link_to "Enter a new query", new_user_query_path(@user) %></p>
-<p><%= link_to "View Saved Searches", user_queries_path(@user) %></p>
+<p class="user"><%= link_to "Edit My Info", edit_user_path(@user) %></p>
+<p class="user"><%= link_to "Enter a new query", new_user_query_path(@user) %></p>
+<p class="user"><%= link_to "View Saved Searches", user_queries_path(@user) %></p>
 <p>Account Created: <%= @user.created_at%></p>
 <p>Account Update on: <%= @user.updated_at%></p>
 <%= form_tag user_path(@user), method: "delete" do %>

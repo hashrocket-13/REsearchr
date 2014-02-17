@@ -43,7 +43,6 @@ end
   def destroy
     @query = Query.find_by(id: params[:id])
     @query.destroy
-    #session.destroy
     redirect_to root_path
   end
 
