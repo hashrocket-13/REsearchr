@@ -1,7 +1,8 @@
 class QueriesController < ApplicationController
 
+before_action :load_user, only: [:index, :create, :show, :destroy]
+
 def index
-    @user = User.find(params[:user_id])
     @query = Query.where(user_id: params[:user_id])
     #@query = Query.all
     @result = @query
@@ -24,7 +25,6 @@ def new
 end
 
   def create
-    @user = User.find(params[:user_id])
     @query = @user.queries.new(title: params[:title], q_string: create_string(params[:title], params[:zip], params[:beds], params[:baths]))
     if @query.save
       redirect_to user_path(@user)
@@ -34,7 +34,6 @@ end
   end
 
   def show
-    @user = User.find(params[:user_id])
     @query = Query.find(params[:id])
     @result = @query
     @result = @result.q_string 
@@ -50,6 +49,10 @@ end
 
   private
 
+  def load_user
+    return @user = User.find(params[:user_id])
+  end
+
   def get_data(result)
     from_streeteasy = HTTParty.get(result)
     return from_streeteasy
@@ -58,12 +61,5 @@ end
   def create_string(title, zip, beds, baths)
     return "http://streeteasy.com/nyc/api/#{title}/data?criteria=zip:#{zip}%7Cbeds:#{beds}%7Cbaths:#{baths}&key=#{STREETEASY_CLIENT_ID}&format=json"
   end
-
- 
-
-  # def query_params
-  #   params.require(:query).permit(:title, :zip, :beds, :baths)
-  # end
-
 
 end
