@@ -1,6 +1,6 @@
 class QueriesController < ApplicationController
 
-before_action :load_user, only: [:index, :create, :show, :destroy]
+before_action :load_user, only: [:index, :create, :show]
 
 def index
     @query = Query.where(user_id: params[:user_id])
