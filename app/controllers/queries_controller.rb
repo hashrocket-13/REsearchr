@@ -1,26 +1,18 @@
 class QueriesController < ApplicationController
 
-before_action :load_user, only: [:index, :create, :show]
+  before_action :load_user, only: [:index, :create, :show]
 
-def index
+  def index
     @query = Query.where(user_id: params[:user_id])
-    @result = @query
-    
-    @arr=[]
-    i=0
-    while i < @result.length 
-       string = @result[i].q_string
-       @api = get_data(string)
-       @arr << @api
-         i += 1
+    @arr = @query.map do |q|
+      get_data(q.q_string).merge({'id' => q.id})
     end
+  end
 
-end
-
-def new
+  def new
     @query = Query.new
     render(:new)
-end
+  end
 
   def create
     @query = @user.queries.new(title: params[:title], q_string: create_string(params[:title], params[:zip], params[:beds], params[:baths]))
@@ -58,5 +50,4 @@ end
   def create_string(title, zip, beds, baths)
     return "http://streeteasy.com/nyc/api/#{title}/data?criteria=zip:#{zip}%7Cbeds:#{beds}%7Cbaths:#{baths}&key=#{STREETEASY_CLIENT_ID}&format=json"
   end
-
 end
