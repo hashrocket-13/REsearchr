@@ -49,7 +49,7 @@ body {
 }
 
  .header {
-  background-color: rgba(203, 203, 203, 0.9);
+  background-color: #E9F2F9;
   padding: 20px 10px 20px 10px;
   overflow: hidden;
   position: relative;
@@ -84,7 +84,7 @@ body {
 
  .center_table_index  {
   width: 1400px;
-  margin-left: 250px;
+  margin-left: 160px;
 }
 
 a {
@@ -108,9 +108,16 @@ a {
  }
 
 
- h1, h2, h3, h4 {
+ h1, h2, h3 {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
+ }
+
+ h4 {
+  display: inline;
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+  padding: 20px
  }
 
  ul {
@@ -180,17 +187,18 @@ color:#09C;
   #table {
     display: table;
     
-    width: 70%; 
+    width: 80%; 
     background: #fff;
     margin: 0;
     box-sizing: border-box;
+    margin-right: 100px; 
 
    }
 
    .caption {
     display: block;
-    width: 70%;
-    background: #64e0ef;
+    width: 80%;
+    background: #3C8DC5;
     height: 55px;
     padding-left: 10px;
     color: #fff;
@@ -202,17 +210,19 @@ color:#09C;
 
 
    .header-row {
-    background: #8b8b8b;
+    background: #6FB7E9;
     color: #fff;
 
    }
 
   .row {
     display: table-row;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
   }
 
   .row:hover {
-    background-color: #abcce1;
+    background-color: #E9F2F9;
   }
 
   .cell {
