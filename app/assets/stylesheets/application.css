@@ -110,6 +110,7 @@ a {
 
  h1, h2, h3, h4 {
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
  }
 
  ul {
@@ -125,9 +126,9 @@ margin:auto;
 position:relative;
 width:380px;
 /*height:450px;*/
-font-family: Tahoma, Geneva, sans-serif;
+font-family: 'Open Sans', sans-serif;
 font-size: 14px;
-font-style: italic;
+/*font-style: italic;*/
 line-height: 24px;
 font-weight: bold;
 color: #09C;
@@ -219,9 +220,12 @@ color:#09C;
     display: table-row;
   }
 
+  .row:hover {
+    background-color: #64e0ef;
+  }
+
   .cell {
     display: table-cell;
-    
     padding: 6px; 
     border-bottom: 1px solid #e5e5e5;
     text-align: center;
