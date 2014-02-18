@@ -19,25 +19,25 @@
   <div class="row">
   <input type="radio" name="expand">
     <span class="cell primary" data-label="Vehicle">Median Price</span>
-    <span class="cell" data-label="Exterior">$<%= @api.fetch("median_price").to_i %></span>
+    <span class="cell" data-label="Exterior"><%= number_to_currency( @api.fetch("median_price")) %></span>
 
   </div>
   <div class="row">
   <input type="radio" name="expand">
     <span class="cell primary" data-label="Vehicle">Average Price</span>
-    <span class="cell" data-label="Exterior">$<%= @api.fetch("average_price") %></span>
+    <span class="cell" data-label="Exterior"><%= number_to_currency( @api.fetch("average_price")) %></span>
 
   </div>
   <div class="row">
   <input type="radio" name="expand">
     <span class="cell primary" data-label="Vehicle">Price in 10th Percentile</span>
-    <span class="cell" data-label="Exterior">$<%= @api.fetch("percentile_10_price") %></span>
+    <span class="cell" data-label="Exterior"><%= number_to_currency( @api.fetch("percentile_10_price")) %></span>
 
   </div>
   <div class="row">
   <input type="radio" name="expand">
     <span class="cell primary" data-label="Vehicle">Price in 90th Percentile</span>
-    <span class="cell" data-label="Exterior">$<%= @api.fetch("percentile_90_price") %></span>
+    <span class="cell" data-label="Exterior"><%= number_to_currency( @api.fetch("percentile_90_price")) %></span>
 
   </div>
   <div class="row">
@@ -55,13 +55,13 @@
   <div class="row">
   <input type="radio" name="expand">
     <span class="cell primary" data-label="Vehicle">Median Price/SqFt</span>
-    <span class="cell" data-label="Exterior"><%= @api.fetch("median_ppsf") %></span>
+    <span class="cell" data-label="Exterior"><%= number_to_currency( @api.fetch("median_ppsf")) %></span>
 
         </div>
   <div class="row">
   <input type="radio" name="expand">
     <span class="cell primary" data-label="Vehicle">Average Price/SqFt</span>
-    <span class="cell" data-label="Exterior">$<%= @api.fetch("average_ppsf") %></span>
+    <span class="cell" data-label="Exterior"><%= number_to_currency( @api.fetch("average_ppsf")) %></span>
 
         </div>
   <div class="row">
