@@ -14,6 +14,7 @@
     <span class="cell">Avg Price/SqFt</span>
     <span class="cell">Avg Week on Market</span>
     <span class="cell">Raw Data</span>
+    <span class="cell">Value Score</span>
   </div>
   <% @arr.each do |item| %>
     <div class="row">
@@ -26,18 +27,9 @@
       <span class="cell" data-label="Avg SqFt"><%= item.fetch("average_sqft") %></span>
       <span class="cell" data-label="Avg Price/SqFt"><%=number_to_currency( item.fetch("average_ppsf")) %></span>
       <span class="cell" data-label="Avg WOM"><%= item.fetch("average_wom").to_i %></span>
-      <span class="cell" data-label="Raw Data">
-
-      <a href="/users/<%= params[:user_id] %>/queries/<%= item.fetch('id') %>">Data</a>
+      <span class="cell" data-label="Raw Data"><a href="/users/<%= params[:user_id] %>/queries/<%= item.fetch('id') %>">View</a></span>
+      <span class="cell" data-label="Value Score"><%= algo_for_quality(item.fetch("average_price"), item.fetch("average_ppsf")) %></span>
     </div>
   <% end %>
  </div>
 </div>
-
-
-
-
-
-
-
-
