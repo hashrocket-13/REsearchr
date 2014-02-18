@@ -186,7 +186,7 @@ height:30px;
 -webkit-border-radius: 15px;
 -moz-border-radius: 15px;
 border-radius: 15px;
-border: 1p solid #999;
+border: 1px solid #999;
 }
 
 input.button:hover {
@@ -194,7 +194,13 @@ background:#fff;
 color:#09C;
 }
 
-
+button {
+  background: #6FB7E9;
+  border-radius: 5px;
+  font-size: 12px;
+  color: white;
+  padding: 7px;
+}
 
 
 /*********query table layout*********/
