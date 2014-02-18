@@ -27,7 +27,7 @@
     <span class="cell" data-label="Avg Price/SqFt"><%=number_to_currency( item.fetch("average_ppsf")) %></span>
     <span class="cell" data-label="Avg WOM"><%= item.fetch("average_wom").to_i %></span>
     <span class="cell" data-label="Raw Data">
-    <% @query.each do |db_item| %>
+    <% @query.select do |db_item| %>
       <a href="/users/<%= params[:user_id] %>/queries/<%= db_item.id %>">Data</a>
     <% end %>
   </div>
