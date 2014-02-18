@@ -76,6 +76,12 @@ body {
   margin-left: 37%;
  }
 
+/*  .center2 {
+  text-align: center;
+  margin-right: 30%;
+  margin-left: 30%;
+ }*/
+
  .center_table  {
   width: 900px;
   margin-left: 400px;
@@ -124,6 +130,15 @@ a {
   text-align: left;
  }
 
+ .tile {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+ }
+
+ .tile:hover {
+  background-color: #E9F2F9;
+ }
+
 /***********FORM STYLE************/
  .form {
 
@@ -166,7 +181,7 @@ right:20px;
 bottom:20px;
 background:#09C;
 color:#fff;
-font-family: Tahoma, Geneva, sans-serif;
+font-family: 'Open Sans', sans-serif;
 height:30px;
 -webkit-border-radius: 15px;
 -moz-border-radius: 15px;
@@ -186,13 +201,11 @@ color:#09C;
 
   #table {
     display: table;
-    
     width: 80%; 
     background: #fff;
     margin: 0;
     box-sizing: border-box;
     margin-right: 100px; 
-
    }
 
    .caption {

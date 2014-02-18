@@ -13,14 +13,14 @@
 <div class="header">
 <header>
   <img src="/assets/logo.png">
-<p><%= link_to "Home", root_path %></p>
-<p><%= link_to "Join REsearchr!", new_user_path %></p>
-<p><%= link_to "My Account", user_path(User.find_by(id: session[:user_id]))unless session[:user_id].nil? %></p>
-<p><%= link_to("Login","/login") if session[:user_id].nil? %></p>
-<p><%= link_to("Log Out #{User.find_by(id: session[:user_id]).first_name}", "/session", method: "delete") unless session[:user_id].nil? %></p>
+<p><%= link_to "home", root_path %></p>
+<p><%= link_to "join", new_user_path %></p>
+<p><%= link_to "my account", user_path(User.find_by(id: session[:user_id]))unless session[:user_id].nil? %></p>
+<p><%= link_to("login","/login") if session[:user_id].nil? %></p>
+<p><%= link_to("log out #{User.find_by(id: session[:user_id]).first_name}", "/session", method: "delete") unless session[:user_id].nil? %></p>
 
-<p><%= link_to "About Us", about_path %></p>
-<p><%= link_to "Contact Us", contact_path %></p>
+<p><%= link_to "about us", about_path %></p>
+<p><%= link_to "contact us", contact_path %></p>
 </header>
 </div>
 

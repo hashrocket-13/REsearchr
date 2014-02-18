@@ -59,8 +59,4 @@ end
     return "http://streeteasy.com/nyc/api/#{title}/data?criteria=zip:#{zip}%7Cbeds:#{beds}%7Cbaths:#{baths}&key=#{STREETEASY_CLIENT_ID}&format=json"
   end
 
-  def value
-    return 
-  end
-
 end
