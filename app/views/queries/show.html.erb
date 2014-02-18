@@ -85,7 +85,7 @@
   <div class="row">
   <input type="radio" name="expand">
     <span class="cell primary" data-label="Vehicle">Search URL</span>
-    <span class="cell" data-label="Exterior"><%= @api.fetch("search_url") %></span>
+    <span class="cell" data-label="Exterior"><%= link_to("View All Listings", @api.fetch("search_url")) %></span>
     
   </div>
 </div>
