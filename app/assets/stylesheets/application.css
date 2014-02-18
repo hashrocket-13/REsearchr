@@ -125,10 +125,8 @@ background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
 margin:auto;
 position:relative;
 width:380px;
-/*height:450px;*/
 font-family: 'Open Sans', sans-serif;
 font-size: 14px;
-/*font-style: italic;*/
 line-height: 24px;
 font-weight: bold;
 color: #09C;
@@ -168,6 +166,7 @@ height:30px;
 border-radius: 15px;
 border: 1p solid #999;
 }
+
 input.button:hover {
 background:#fff;
 color:#09C;
@@ -177,14 +176,6 @@ color:#09C;
 
 
 /*********query table layout*********/
-/*
-  body {
-    background: #cacaca;
-    margin: 0;
-    padding: 20px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-      font-weight: 300;
-  }*/
 
   #table {
     display: table;
@@ -221,7 +212,7 @@ color:#09C;
   }
 
   .row:hover {
-    background-color: #64e0ef;
+    background-color: #abcce1;
   }
 
   .cell {
