@@ -69,7 +69,7 @@ body {
  width: 13%; 
  }
 
- .center{
+.center{
   text-align: center;
 /*    width: 40%;
 */  margin-right: 37%;
@@ -82,13 +82,13 @@ body {
   margin-left: 30%;
  }*/
 
- .center_table  {
+.center_table  {
   width: 900px;
   margin-left: 400px;
 
 }
 
- .center_table_index  {
+.center_table_index  {
   width: 1400px;
   margin-left: 160px;
 }
@@ -101,42 +101,48 @@ a {
   padding: 50px 100px 0px 100px;
 }
 
- a:link {
+a:link {
   color: #0066FF;
  }
 
-  a:hover {
+a:hover {
   color: #0066FF;
  }
 
-  a:visited {
+a:visited {
   color: #0066FF;
  }
 
 
- h1, h2, h3 {
+h1, h2, h3 {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
  }
 
- h4 {
+h4 {
   display: inline;
   font-family: 'Open Sans', sans-serif;
   text-align: left;
   padding: 20px
  }
 
- ul {
+ul {
   text-align: left;
  }
 
- .tile {
+.tile {
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
+  padding: 10px;
  }
 
- .tile:hover {
+.tile:hover {
   background-color: #E9F2F9;
+  padding: 10px;
+ }
+
+ #score {
+  background-color: lightgreen;
  }
 
 /***********FORM STYLE************/

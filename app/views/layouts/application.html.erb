@@ -17,7 +17,7 @@
 <p><%= link_to "join", new_user_path %></p>
 <p><%= link_to "my account", user_path(User.find_by(id: session[:user_id]))unless session[:user_id].nil? %></p>
 <p><%= link_to("login","/login") if session[:user_id].nil? %></p>
-<p><%= link_to("log out #{User.find_by(id: session[:user_id]).first_name}", "/session", method: "delete") unless session[:user_id].nil? %></p>
+<p><%= link_to("logout #{User.find_by(id: session[:user_id]).first_name}", "/session", method: "delete") unless session[:user_id].nil? %></p>
 
 <p><%= link_to "about us", about_path %></p>
 <p><%= link_to "contact us", contact_path %></p>
