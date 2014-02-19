@@ -71,16 +71,9 @@ body {
 
 .center{
   text-align: center;
-/*    width: 40%;
-*/  margin-right: 37%;
+  margin-right: 37%;
   margin-left: 37%;
  }
-
-/*  .center2 {
-  text-align: center;
-  margin-right: 30%;
-  margin-left: 30%;
- }*/
 
 .center_table  {
   width: 900px;
@@ -154,7 +147,7 @@ ul {
  }
 
 /***********FORM STYLE************/
- .form {
+.form {
 
 background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
 background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
