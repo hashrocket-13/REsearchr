@@ -1,10 +1,10 @@
-== README
+# == README
 
- # REsearcher App
+# REsearcher App
 
 ## GA WDI NYC Jan 14, Project1
 
- ## OVERVIEW
+## OVERVIEW
 
 REsearchr allows you to search live real estate listing data to compare neighborhoods.  REsearchr was developed as a sample Rails project using the agile software development process.
 
