@@ -79,7 +79,7 @@
   <div class="row">
   <input type="radio" name="expand">
     <span class="cell primary" data-label="Vehicle">Value Score</span>
-    <span class="cell" id="score" data-label="Exterior"><%= algo_for_quality(@api.fetch("average_price"), @api.fetch("average_ppsf")) %></span>
+    <span class="cell" id="<%= color(algo_for_quality(@api.fetch("average_price"), @api.fetch("average_ppsf"))) %>" data-label="Exterior"><%= algo_for_quality(@api.fetch("average_price"), @api.fetch("average_ppsf")) %></span>
 
         </div>      
   <div class="row">

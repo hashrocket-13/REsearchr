@@ -141,8 +141,16 @@ ul {
   padding: 10px;
  }
 
- #score {
+#scoregreen {
   background-color: lightgreen;
+ }
+
+#scoreyellow {
+  background-color: #FFF473;
+ }
+
+#scorered {
+  background-color: coral;
  }
 
 /***********FORM STYLE************/
