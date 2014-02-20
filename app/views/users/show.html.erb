@@ -1,6 +1,6 @@
 <h2>Welcome <%= @user.first_name %>!</h2>
 
-<div class="center">
+<div class="form_user">
 <p class="tile"><%= link_to "Edit My Info", edit_user_path(@user) %></p>
 <p class="tile"><%= link_to "Enter a new query", new_user_query_path(@user) %></p>
 <p class="tile"><%= link_to "View Saved Searches", user_queries_path(@user) %></p>

@@ -66,7 +66,7 @@ body {
 
  img {
  float: left;
- width: 13%; 
+ width: 200px; 
  }
 
 .center{
@@ -74,6 +74,11 @@ body {
   margin-right: 37%;
   margin-left: 37%;
  }
+
+.center_user{
+  text-align: center;
+
+ } 
 
 .center_table  {
   width: 900px;
@@ -169,6 +174,31 @@ border: inset 1px solid #333;
 -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+ }
+
+.form_user {
+
+background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+margin:auto;
+position:relative;
+width:380px;
+font-family: 'Open Sans', sans-serif;
+font-size: 14px;
+line-height: 24px;
+font-weight: bold;
+color: #09C;
+text-decoration: none;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+padding:40px;
+border: 1px solid #999;
+border: inset 1px solid #333;
+-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+text-align: center;
  }
 
  input    {
