@@ -1,22 +1,21 @@
-# == README
 
 # REsearcher App
 
 ## GA WDI NYC Jan 14, Project1
 
-## OVERVIEW
+### OVERVIEW
 
 REsearchr allows you to search live real estate listing data to compare neighborhoods.  REsearchr was developed as a sample Rails project using the agile software development process.
 
 
-## Technologies Used
+### Technologies Used
 * Ruby 2.1.0
 * Ruby on Rails 4.0.2
 * PostgreSQL Database
 * Authentication & Authorization from scratch using <a href="http://bcrypt-ruby.rubyforge.org/">bcrypt-ruby</a> 
 * <a href="http://streeteasy.com/nyc/api/info">StreetEasy API</a> and <a href="https://github.com/jnunemaker/httparty">HTTParty</a> 
 
-## User Stories Completed
+### User Stories Completed
 * User can go to the homepage
 * User can login
 * User can navigate back to their account
@@ -26,12 +25,12 @@ REsearchr allows you to search live real estate listing data to compare neighbor
 * User can delete a query
 * User can view the value score
 
-## BACKLOG
+### BACKLOG
 * All user stories can be viewed by looking at <a href="https://www.pivotaltracker.com/s/projects/1015700">this Pivotal Tracker project.</a> 
 
-## Heroku
+### Heroku
 * Here is my app on <a href="http://shielded-stream-8384.herokuapp.com/">Heroku</a>
 
-## ERD
+### ERD
 * ERD is <a href="http://www.flickr.com/photos/garciagod7/12640239443/">here</a>
 
