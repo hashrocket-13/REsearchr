@@ -1,6 +1,5 @@
 <h1>View all Saved Searches</h1>
 
-
 <div class="center_table_index">
 <div class="caption">All Saved Searches</div>  
 <div id="table">
@@ -16,7 +15,7 @@
     <span class="cell">Raw Data</span>
     <span class="cell">Value Score</span>
   </div>
-  <% @arr.each do |item| %>
+  <% @listings_data.each do |item| %>
     <div class="row">
       <input type="radio" name="expand" />
       <span class="cell primary" data-label="Description"><%= item.fetch("criteria_description") %></span>

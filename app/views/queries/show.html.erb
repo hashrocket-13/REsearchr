@@ -98,7 +98,7 @@
 </div>
 <br>
 <div class="center">
-<%= form_tag user_query_path(@query, params[:id]), method: "delete" do %>
+<%= form_tag user_query_path(@user, @query), method: "delete" do %>
   <%= submit_tag("Delete Query") %>
 <% end %>
 </div>

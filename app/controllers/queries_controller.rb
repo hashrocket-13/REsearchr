@@ -4,8 +4,8 @@ class QueriesController < ApplicationController
 
   def index
     @query = Query.where(user_id: params[:user_id])
-    @arr = @query.map do |q|
-      get_data(q.q_string).merge({'id' => q.id})
+    @listings_data = @query.map do |listing|
+      get_data(listing.q_string).merge({'id' => listing.id})
     end
   end
 
@@ -25,15 +25,14 @@ class QueriesController < ApplicationController
 
   def show
     @query = Query.find(params[:id])
-    @result = @query
-    @result = @result.q_string 
+    @result = @query.q_string 
     @api = get_data(@result)
   end
 
   def destroy
     @query = Query.find_by(id: params[:id])
     @query.destroy
-    redirect_to root_path
+    redirect_to ("/users/#{params[:user_id]}/queries")
   end
 
   private

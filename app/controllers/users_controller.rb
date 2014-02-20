@@ -19,7 +19,6 @@ class UsersController < ApplicationController
   end
 
   def show
-   
   end
 
   def edit
@@ -51,16 +50,15 @@ class UsersController < ApplicationController
     params.require(:user).permit(:email, :first_name, :last_name, :password, :password_confirmation)
   end
 
-    def authenticate
+  def authenticate
     unless logged_in?
-      redirect_to login_path
-     end
+     redirect_to login_path
     end
+  end
 
   def authorize
     unless current_user == @user
       redirect_to login_path
     end
-   end
-
+  end
 end
