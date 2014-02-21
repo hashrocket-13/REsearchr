@@ -78,7 +78,7 @@ body {
  } 
 
 .center_table  {
-  width: 550px;
+  width: 580px;
   margin: auto;
 }
 
@@ -261,7 +261,7 @@ button {
     display: table;
     background: #fff;
     box-sizing: border-box;
-    width: 550px;
+    width: 580px;
    }
 
    .caption_show {
