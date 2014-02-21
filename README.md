@@ -29,7 +29,7 @@ REsearchr allows you to search live real estate listing data to compare neighbor
 * All user stories can be viewed by looking at <a href="https://www.pivotaltracker.com/s/projects/1015700">this Pivotal Tracker project.</a> 
 
 ### Heroku
-* Here is my app on <a href="http://shielded-stream-8384.herokuapp.com/">Heroku</a>
+* Here is my app on <a href="http://researchrapp.herokuapp.com/">Heroku</a>
 
 ### ERD
 * ERD is <a href="http://www.flickr.com/photos/garciagod7/12640239443/">here</a>
