@@ -20,11 +20,11 @@
       <input type="radio" name="expand" />
       <span class="cell primary" data-label="Description"><%= item.fetch("criteria_description") %></span>
       <span class="cell" data-label="Total Listings"><%= item.fetch("listing_count") %></span>
-      <span class="cell" data-label="Avg Price"><%=number_to_currency(item.fetch("average_price")) %></span>
-      <span class="cell" data-label="Price 10th Percentile"><%=number_to_currency( item.fetch("percentile_10_price")) %></span>
-      <span class="cell" data-label="Price 90th Percentile"><%=number_to_currency( item.fetch("percentile_90_price")) %></span>
+      <span class="cell" data-label="Avg Price"><%=number_to_currency(item.fetch("average_price"), :precision => 0) %></span>
+      <span class="cell" data-label="Price 10th Percentile"><%=number_to_currency( item.fetch("percentile_10_price"), :precision => 0) %></span>
+      <span class="cell" data-label="Price 90th Percentile"><%=number_to_currency( item.fetch("percentile_90_price"),:precision => 0) %></span>
       <span class="cell" data-label="Avg SqFt"><%= item.fetch("average_sqft") %></span>
-      <span class="cell" data-label="Avg Price/SqFt"><%=number_to_currency( item.fetch("average_ppsf")) %></span>
+      <span class="cell" data-label="Avg Price/SqFt"><%=number_to_currency( item.fetch("average_ppsf"),:precision => 0) %></span>
       <span class="cell" data-label="Avg WOM"><%= item.fetch("average_wom").to_i %></span>
       <span class="cell" data-label="Raw Data"><a href="/users/<%= params[:user_id] %>/queries/<%= item.fetch('id') %>">View</a></span>
       <span class="cell" id="<%= color(algo_for_quality(item.fetch("average_price"), item.fetch("average_ppsf"))) %>" data-label="Value Score"><%= algo_for_quality(item.fetch("average_price"), item.fetch("average_ppsf")) %></span>
