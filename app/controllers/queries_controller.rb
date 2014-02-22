@@ -17,7 +17,7 @@ class QueriesController < ApplicationController
   def create
     @query = @user.queries.new(title: params[:title], q_string: create_string(params[:title], params[:zip], params[:beds], params[:baths]))
     if @query.save
-      redirect_to user_path(@user)
+      redirect_to ("/users/#{params[:user_id]}/queries")
     else
       render(:new)
     end

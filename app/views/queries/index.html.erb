@@ -30,5 +30,6 @@
       <span class="cell" id="<%= color(algo_for_quality(item.fetch("average_price"), item.fetch("average_ppsf"))) %>" data-label="Value Score"><%= algo_for_quality(item.fetch("average_price"), item.fetch("average_ppsf")) %></span>
     </div>
   <% end %>
- </div>
+ </div><br>
+ <a href="/users/<%= params[:user_id]%>/queries/new">Enter a new search query</a>
 </div>
