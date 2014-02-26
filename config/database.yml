@@ -4,3 +4,15 @@ development:
   database: researchr_db
   pool: 5
   password:
+  username: coryhaber
+  host: localhost 
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: researchr_db_test
+  pool: 5
+  password:
+  username: coryhaber
+  host: localhost 
+
