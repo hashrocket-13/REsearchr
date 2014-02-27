@@ -30,6 +30,11 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  filter: blur(1.5px);
+  -webkit-filter: blur(1.5px);
+  -moz-filter: blur(1.5px);
+  -o-filter: blur(1.5px);
+  -ms-filter: blur(1.5px);
 }
 
 .text {
@@ -44,6 +49,11 @@ body {
   margin-top: 170px;
   letter-spacing: 1.5px;
   border-radius: 8px;
+  filter: drop-shadow(7px 7px 13px #fff);
+  -webkit-filter: drop-shadow(7px 7px 13px #fff);
+  -mox-filter: drop-shadow(7px 7px 13px #fff);
+  -o-filter: drop-shadow(7px 7px 13px #fff);
+  -ms-filter: drop-shadow(7px 7px 13px #fff);
 
 }
 
