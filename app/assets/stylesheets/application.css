@@ -35,10 +35,15 @@ body {
 .text {
   color: #fff;
   font-size: 30px;
-  background-color: rgba(10,10,10,0.5);
+  background-color: rgba(100,100,100,0.8);
   padding: 20px;
-  width: 800px;
-  font-family: 'Bevan', sans-serif;
+  width: 720px;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 170px;
+  letter-spacing: 1.5px;
+  border-radius: 8px;
 
 }
 
