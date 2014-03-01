@@ -1,6 +1,7 @@
 class QueriesController < ApplicationController
 
   before_action :load_user, only: [:index, :create, :show]
+  before_action :authenticate, :authorize
 
   def index
     @query = Query.where(user_id: params[:user_id])
@@ -48,5 +49,17 @@ class QueriesController < ApplicationController
 
   def create_string(title, zip, beds, baths)
     return "http://streeteasy.com/nyc/api/#{title}/data?criteria=zip:#{zip}%7Cbeds:#{beds}%7Cbaths:#{baths}&key=#{STREETEASY_CLIENT_ID}&format=json"
+  end
+
+  def authenticate
+    unless logged_in?
+     redirect_to login_path
+    end
+  end
+
+  def authorize
+    unless current_user == @user
+      redirect_to login_path
+    end
   end
 end
