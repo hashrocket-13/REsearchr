@@ -22,10 +22,10 @@ describe "user can delete a query on index page" do
     # save_and_open_page
 
     # Expectations
+    expect(page).to have_button "Delete"
+    click_button "Delete"
     
   end
-
-
 
 
   def login(user)

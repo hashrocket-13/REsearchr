@@ -14,6 +14,7 @@
     <span class="cell">Avg Week on Market</span>
     <span class="cell">Raw Data</span>
     <span class="cell">Value Score</span>
+    <span class="cell">Action</span>
   </div>
   <% @listings_data.each do |item| %>
     <div class="row">
@@ -28,6 +29,10 @@
       <span class="cell" data-label="Avg WOM"><%= item.fetch("average_wom").to_i %></span>
       <span class="cell" data-label="Raw Data"><a href="/users/<%= params[:user_id] %>/queries/<%= item.fetch('id') %>">View</a></span>
       <span class="cell" id="<%= color(algo_for_quality(item.fetch("average_price"), item.fetch("average_ppsf"))) %>" data-label="Value Score"><%= algo_for_quality(item.fetch("average_price"), item.fetch("average_ppsf")) %></span>
+      <span class="cell" data-label="Action"><%= form_tag user_query_path(@user, item.fetch('id')),:class => 'del', method: "delete" do %>
+        <%= submit_tag("Delete") %>
+        <% end %>
+      </span>
     </div>
   <% end %>
  </div><br>

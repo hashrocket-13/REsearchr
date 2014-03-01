@@ -223,6 +223,13 @@ height: 25px;
 box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
+form.del input {
+  width: 65px;
+  background-color: #FF8573;
+  border-radius: 5px;
+  color: #fff;
+}
+
 input.button {
 width:100px;
 position:absolute;
