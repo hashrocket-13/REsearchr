@@ -7,9 +7,13 @@ describe "user can delete account" do
     
     # Setup
     login(user)
+    
     # Workflow
+    click_link "my account"
+    click_button "Delete My Account"
 
     # Expectations
+    expect(page).to have_content "Welcome to REsearchr"
 
   end
 

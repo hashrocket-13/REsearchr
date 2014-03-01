@@ -14,9 +14,9 @@ describe "user can update account info" do
 
     # Expectations
     expect(page).to have_content "Welcome Capybara!"
-
-
   end
+
+  
 
   def login(user)
     visit "/login"
