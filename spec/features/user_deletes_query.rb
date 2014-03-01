@@ -19,7 +19,7 @@ describe "user can delete a query on index page" do
     fill_in "beds", with: "1"
     fill_in "baths", with: "1"
     click_button "Submit Search"
-    save_and_open_page
+    # save_and_open_page
 
     # Expectations
     
