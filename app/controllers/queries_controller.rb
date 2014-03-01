@@ -1,7 +1,7 @@
 class QueriesController < ApplicationController
 
   before_action :load_user, only: [:index, :create, :show]
-  before_action :authenticate, :authorize
+  before_action :authenticate, :authorize, except: [:new, :destroy]
 
   def index
     @query = Query.where(user_id: params[:user_id])
