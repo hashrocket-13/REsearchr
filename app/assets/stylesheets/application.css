@@ -123,6 +123,23 @@ a:visited {
   color: #0066FF;
  }
 
+ .new-query-button {
+  background-color: rgb(152, 226, 127);
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-family: 'Open Sans', sans-serif;
+  display: block;
+  width: 150px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+ }
+
+ a.new-query-button {
+  color: #fff;
+ }
+
 
 h1, h2, h3 {
   text-align: center;
@@ -214,6 +231,8 @@ text-align: center;
  }
 
  input    {
+background-color: rgba(100,100,100, 0.1);
+border-radius: 5px;
 width:375px;
 display:block;
 border: 1px solid #999;
@@ -221,6 +240,22 @@ height: 25px;
 -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.join input[type="submit"] {
+  background-color: rgb(152, 226, 127);
+  height: 50px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+}
+
+.deleteaccount input[type="submit"] {
+  background-color: rgb(236, 123, 103);
+  width: 130px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
 }
 
 form.del input {
