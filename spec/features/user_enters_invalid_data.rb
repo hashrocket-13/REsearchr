@@ -10,7 +10,7 @@ describe "user enters invalid data" do
 
     # Worlflow
     visit new_user_query_path(user)
-    fill_in "title", with: "sales"
+    select('Sales', :from => 'title')
     fill_in "zip", with: "10024"
     fill_in "beds", with: "1"
     fill_in "baths", with: "1"

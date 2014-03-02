@@ -9,14 +9,14 @@ describe "algo for quality and color method" do
     login(user)
     # Workflow
     click_link "Enter a new query"
-    fill_in "title", with: "sales"
+    select('Sales', :from => 'title')
     fill_in "zip", with: "10024"
     fill_in "beds", with: "1"
     fill_in "baths", with: "1"
     click_button "Submit Search"
     # save_and_open_page
     # Expectations
-    expect(page).should have_css('#scoregreen')
+    expect(page).to have_css('#scoregreen')
 
 
   end
