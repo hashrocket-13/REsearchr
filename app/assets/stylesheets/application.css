@@ -17,6 +17,10 @@ body {
   margin: 0;
 }
 
+.border {
+  border-bottom: solid;
+}
+
 .background img {
   z-index: -1;
   min-height: 100%;
@@ -31,7 +35,7 @@ body {
   top: 0;
   left: 0;
   filter: blur(1.5px);
-  -webkit-filter: blur(1.5px);
+  -webkit-filter: blur(5px);
   -moz-filter: blur(1.5px);
   -o-filter: blur(1.5px);
   -ms-filter: blur(1.5px);
@@ -39,11 +43,11 @@ body {
 
 .text {
   color: #fff;
-  font-size: 30px;
-  background-color: rgba(100,100,100,0.8);
+  font-size: 50px;
+  /*background-color: rgba(100,100,100,0.8);*/
   padding: 20px;
   width: 720px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Exo', sans-serif;
   text-align: center;
   margin: 0 auto;
   margin-top: 170px;
@@ -59,6 +63,7 @@ body {
 
 .sm {
   font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
 }
 
  .header {
