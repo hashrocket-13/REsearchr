@@ -2,12 +2,15 @@
 <form action="/users/<%= params[:user_id] %>/queries" method="POST">
     <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
   <label>
-    Sales/Rentals: 
-  <input type="text" name="title">
+    Sales or Rentals: 
+  <select name="title">
+    <option value="sales">Sales</option>
+    <option value="rentals">Rentals</option>
+  </select>
   </label>
 
   <label>
-    Zip:
+    NYC Zip:
   <input type="text" name="zip">
   </label>
   
