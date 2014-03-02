@@ -336,6 +336,15 @@ select {
   font-size: 0.8em;
 }
 
+.show-delete input[type="submit"] {
+  background-color: rgb(236, 123, 103);
+  width: 130px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  font-size: 0.8em;
+}
+
 form.del input {
   width: 65px;
   background-color: #FF8573;
