@@ -34,17 +34,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  filter: blur(1.5px);
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(1.5px);
-  -o-filter: blur(1.5px);
-  -ms-filter: blur(1.5px);
-/*  
-  filter: brightness(0.2);
-  -webkit-filter: brightness(0.7);
-  -moz-filter: brightness(0.2);
-  -o-filter: brightness(0.2);
-  -ms-filter: brightness(0.2);*/
+
 }
 
 .text {
@@ -60,11 +50,7 @@ body {
   margin-bottom: 50px;
   letter-spacing: 1.5px;
   border-radius: 8px;
-/*  filter: drop-shadow(7px 7px 13px #fff);
-  -webkit-filter: drop-shadow(7px 7px 13px #fff);
-  -mox-filter: drop-shadow(7px 7px 13px #fff);
-  -o-filter: drop-shadow(7px 7px 13px #fff);
-  -ms-filter: drop-shadow(7px 7px 13px #fff);*/
+
 }
 
 .sm {
